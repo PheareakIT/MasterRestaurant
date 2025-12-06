@@ -1,0 +1,13 @@
+.about{
+    padding: 0 12rem;
+    padding-top: 60px;
+}
+
+.about h1{
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.about hr{
+    border: 2px solid brown;
+}

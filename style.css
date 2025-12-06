@@ -1,0 +1,567 @@
+:root {
+    --main-color: #ffb411;
+    --text-color: #1e1c2a;
+    --bg-color: white;
+
+    --big-font: 4rem;
+    --h2-font: 1.25rem;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #f3eee4;
+}
+
+/* body.active, header.active{
+    --text-color: white;
+    --bg-color: #1e1c2a;
+} */
+
+
+.container{
+    position: relative;
+}
+
+.bg-video{
+    width: 100%;
+    height: 100vh;
+    /* background-color: lightgreen; */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bg-video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(8px);
+    /* filter: grayscale(80%); */
+}
+
+header{
+    background-color: #f1f1f1;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 100px;
+    box-shadow: 0 0 4px gray;
+    z-index: 30;
+}
+
+.icon{
+    display: none;
+}
+
+nav{
+    display: flex;
+    gap: 32px;
+}
+
+.logo a{
+    font-size: var(--h2-font);
+    color: orange;
+    font-weight: 600;
+}
+
+.logo a:hover{
+    color: rgba(255, 166, 0, 0.8);
+}
+
+
+
+nav a{
+    color: var(--text-color);
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+nav a:hover{
+    color: orange;
+    text-decoration: underline;
+}
+
+.bx{
+    font-size: 20px;
+}
+
+.hero-title{
+    /* background-color: rgba(128, 128, 128, 0.300); */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.hero-title h1{
+    margin-bottom: 10px;
+    font-size: 5rem;
+}
+
+.hero-title p{
+    font-size: var(--h2-font);
+}
+
+/* button */
+
+.btn{
+    /* background-color: blue; */
+    width: 30%;
+    margin: 2rem auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.btn button{
+    padding : 12px 20px;
+    /* background-color: green; */
+    /* background-color: orange; */
+    background-color: orangered;
+    border: none;
+    color: white;
+    transition: all 0.2s ease-in;
+}
+
+.btn button:hover{
+    background-color: rgba(255, 68, 0, 0.8);
+    cursor: pointer;
+    box-shadow: 0px 2px 4px black;
+}
+
+
+/* Responsive Header*/
+@media(max-width: 800px){
+    .icon{
+        display: block;
+    }
+
+    .icon i{
+        font-size: 1.7rem;
+    }
+
+    .icon i:hover{
+        color: orange;
+        cursor: pointer;
+    }
+
+    .nav-bar{
+        position: absolute;
+        background-color: white;
+        width: 30%;
+        top: 10;
+        right: 0;
+        transition: all 0.2s ease-in;
+        display: none;
+
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        padding: 0.5rem 0;
+        box-shadow: 0px 0px 4px gray;
+        height: 100vh;
+        top: 64px;
+        right: -300px;
+    }
+    .active{
+        right: 0px;
+    }
+
+
+}
+
+
+
+/* Hero Section */
+.hero{
+    background-color: #f3eee4;
+    width: 100%;
+    text-align: center;
+    padding: 4rem;
+}
+
+.hero h1{
+    font-weight: 600;
+}
+
+.hero p{
+    margin-top: 1rem;
+}
+
+/* top food */
+
+.top-food{
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 ;
+}
+.item{
+    /* background-color: blue; */
+    width: 500px;
+}
+
+.item img{
+    width: 100%;
+}
+
+/* Resposive top food */
+@media(max-width: 800px){
+    .top-food{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .item{
+        width: 300px;
+    }
+}
+
+/* Background Cook */
+
+.cook {
+    width: 100%;
+    height: 90vh;
+}
+.bg-cook {
+    width: 100%;
+    height: 90vh;
+    position: fixed;
+    top: 60px;
+    z-index: -10;
+}
+
+.bg-cook video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cook-text{
+    width: 100%;
+    text-align: center;
+}
+
+.cook-text{
+    background-color: rgba(128, 128, 128, 0.041);
+    padding:100px 0px 200px 0px;
+}
+.cook-text h2{
+    font-size: 2rem;
+}
+
+.cook-text p{
+    margin-top: 1rem;
+    color: white;
+}
+.cook-text h3{
+    color: white;
+    margin-top: 1rem;
+} 
+
+
+/* Chef */
+
+.chef{
+    background-color: #f3eee4;
+    /* background-color: green; */
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.chef .box{
+    width: 66%;
+    /* background-color: gray; */
+    margin: 0 auto;
+
+    display: flex;
+}
+.row-2{
+    width: 50%;
+    height: 600px;
+}
+
+.box .row-2 img{
+    width: 100%;
+    height: 100%;
+}
+
+.box .text{
+    padding: 5rem 0 0 2rem;
+}
+
+.box h2{
+    margin-bottom: 2rem;
+}
+.box p{
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.row-2 button{
+    margin-top: 4rem;
+    padding: 12px 24px;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+}
+
+.row-2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.row-2 button:hover{
+    background-color: #ff4400c9;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px black;
+
+}
+
+/* Responsive Chef */
+@media(max-width: 800px){
+    .chef .box{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .chef .box .row-2{
+        /* background-color: blue; */
+        width: 100%;
+        margin-top: 2rem;
+        /* height: 540px; */
+    }
+
+    .chef .box .text{
+        order: 2;
+        margin: auto;
+        padding: 1rem 0px;
+        text-align: center;
+        /* background-color: blue; */
+    }
+
+}
+
+/* Restaurant Picture */
+.restaurant{
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 60px;
+    z-index: 1;
+}
+
+.restaurant img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+}
+
+.restaurant .text{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding-top: 12%;
+    transition: all 1s ease;
+}
+.restaurant .text h3{
+    font-size: 2rem;
+    text-shadow: 0px 0px 20px black;
+    transition: all 1s ease;
+}
+
+.restaurant .text h1{
+    font-size: 7rem;
+    text-shadow: 0px 0px 10px black;
+    transition: all 1s ease;
+}
+.restaurant .text:hover{
+    transform: translate(0px,-1rem);
+}
+
+.restaurant .text h1:hover, .text h3:hover{
+    text-shadow: 0px 0px 50px  rgb(0, 0, 0);
+    /* text-shadow: 0px 0px 2px  #f3eee4; */
+    /* color: transparent; */
+    /* outline: 4px solid red; */
+
+}
+
+
+
+/* GAllERY */
+
+.gallery{
+    background-color: white;
+    min-height: 92vh;
+    position: sticky;
+    top: 60px;
+    z-index: 2;
+}
+
+.gallery div{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gallery div h1{
+    padding-top: 4rem;
+}
+.gallery-con{
+    /* background-color: gray; */
+    width: 72%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 4px;
+    padding-top: 16px;
+}
+
+.gallery-con .box{
+    width : 250px;
+    height: 150px;
+}
+
+.gallery-con .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Gallary */
+@media(max-width: 800px){
+    .gallery-con{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .gallery-con .box{
+        width: 250px;
+    }
+
+}
+
+
+
+/* Footer section */
+
+.footer{
+    position: relative;
+    background-color: white;
+    width: 100%;
+    min-height: 92vh;
+    box-shadow: 0px 0px 2px black;
+    z-index: 10;
+    padding-top: 2rem;
+}
+
+.footer h1{
+    text-align: center;
+}
+
+.map{
+    padding: 1rem 0rem;
+    width: 72%;
+    margin: auto;
+}
+
+.map div{
+    height: 44vh;
+    border: 4px gray solid;
+}
+
+.map div iframe{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 1.5rem;
+    padding: 0.5rem 15rem;
+
+}
+
+.contact-box h3 {
+    margin-bottom: 1rem;
+}
+
+.social {
+    display: flex;
+    margin-top: 1.5rem;
+    gap: 8px;
+}
+
+.social i {
+    font-size: 20px;
+    margin-top: 1rem;
+    color: var(--text-color);
+}
+
+.social i:hover {
+    color: var(--main-color);
+}
+
+.contact-box li a {
+    color: var(--text-color);
+}
+
+.contact-box li a:hover {
+    color: var(--main-color);
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.address span{
+    font-size: 1rem;
+}
+
+.copyright {
+    margin-top: 1rem;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+/* Responsive Footer */
+@media(max-width: 900px){
+    .footer {
+        text-align: center;
+    }
+    .social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-box{
+        list-style: none;
+    }
+}
+
